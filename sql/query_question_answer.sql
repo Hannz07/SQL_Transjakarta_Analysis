@@ -1,5 +1,5 @@
 -- QUESTIONS
-
+SELECT * FROM daily_passengers ORDER BY tanggal LIMIT 50;
 -- 1. List the types of public transportation in the daily passengers data table!
 
 SELECT DISTINCT 
@@ -38,11 +38,7 @@ GROUP BY
 ORDER BY
 	total_penumpang DESC;
 
--- 4. Create a runnig total for each year for the transjakarta public transportation mode!
-
-SELECT DISTINCT(YEAR(tanggal)) AS tahun
-FROM
-	daily_passengers;
+-- 4. Create a running total for each year for the transjakarta public transportation mode!
 
 WITH total_tahunan AS (
 	SELECT
